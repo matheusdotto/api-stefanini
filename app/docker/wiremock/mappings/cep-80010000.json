@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/cep/80010000"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"cep\":\"80010000\",\"logradouro\":\"Rua Barão do Rio Branco\",\"bairro\":\"Centro\",\"cidade\":\"Curitiba\",\"estado\":\"PR\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

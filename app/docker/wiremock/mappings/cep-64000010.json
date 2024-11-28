@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/cep/64000010"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"cep\":\"64000010\",\"logradouro\":\"Avenida Frei Serafim\",\"bairro\":\"Centro\",\"cidade\":\"Teresina\",\"estado\":\"PI\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/cep/50010000"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"cep\":\"50010000\",\"logradouro\":\"Avenida Dantas Barreto\",\"bairro\":\"Santo Antônio\",\"cidade\":\"Recife\",\"estado\":\"PE\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/cep/20040030"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"cep\":\"20040030\",\"logradouro\":\"Avenida Rio Branco\",\"bairro\":\"Centro\",\"cidade\":\"Rio de Janeiro\",\"estado\":\"RJ\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

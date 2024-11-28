@@ -1,0 +1,293 @@
+{
+  "info": {
+    "name": "APP Stefanini",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "Create Basic User",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "http://localhost:10000/users",
+          "protocol": "http",
+          "host": [
+            "localhost:10000"
+          ],
+          "path": [
+            "users"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\":\"test4\",\n  \"password\":\"123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Docker Test",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "gtw-id",
+            "value": "1kslrpcep",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "{{accessToken}}",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:8080/cep/50010000",
+          "protocol": "http",
+          "host": [
+            "localhost:8080"
+          ],
+          "path": [
+            "cep",
+            "50010000"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "List Users",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "{{accessToken}}",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:10000/users",
+          "protocol": "http",
+          "host": [
+            "localhost:10000"
+          ],
+          "path": [
+            "users"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Login Admin",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "http://localhost:10000/login",
+          "protocol": "http",
+          "host": [
+            "localhost:10000"
+          ],
+          "path": [
+            "login"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\":\"admin\",\n  \"password\":\"123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Login Basic User",
+      "event": [],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": null,
+        "description": "",
+        "url": {
+          "raw": "http://localhost:10000/login",
+          "protocol": "http",
+          "host": [
+            "localhost:10000"
+          ],
+          "path": [
+            "login"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n \"username\":\"test4\",\n  \"password\":\"123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Teste CEP DOCKER",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "gtw-id",
+            "value": "1kslrpcep",
+            "disabled": false,
+            "type": "default"
+          }
+        ],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "{{accessToken}}",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:10000/consulta-cep?cep=50010000&username=test4",
+          "protocol": "http",
+          "host": [
+            "localhost:10000"
+          ],
+          "path": [
+            "consulta-cep"
+          ],
+          "query": [
+            {
+              "key": "cep",
+              "value": "50010000"
+            },
+            {
+              "key": "username",
+              "value": "test4"
+            }
+          ],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Filter By Cep",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "{{accessToken}}",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:10000/logs/cep?cep=50010000",
+          "protocol": "http",
+          "host": [
+            "localhost:10000"
+          ],
+          "path": [
+            "logs",
+            "cep"
+          ],
+          "query": [
+            {
+              "key": "cep",
+              "value": "50010000"
+            }
+          ],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Filter By Username",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "key": "token",
+            "value": "{{accessToken}}",
+            "type": "string"
+          }
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:10000/logs/user?username=test4",
+          "protocol": "http",
+          "host": [
+            "localhost:10000"
+          ],
+          "path": [
+            "logs",
+            "user"
+          ],
+          "query": [
+            {
+              "key": "username",
+              "value": "test4"
+            }
+          ],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "accessToken",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}

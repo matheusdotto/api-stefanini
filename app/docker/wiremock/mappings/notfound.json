@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPattern": "/cep/(\\d{8})/"
+  },
+  "response": {
+    "status": 422,
+    "body": "{\"codigo\":422,\"mensagem\":\"Erro na chamada da aplicação de CEP\",\"campos\":{\"mensagem\":\"CEP não encontrado\",\"valor\":\"{{request.pathSegments.[1]}}\"}}",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "transformers": ["response-template"]
+  }
+}

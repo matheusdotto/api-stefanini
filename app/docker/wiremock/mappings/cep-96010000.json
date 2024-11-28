@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/cep/96010000"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"cep\":\"96010000\",\"logradouro\":\"Rua Andrade Neves\",\"bairro\":\"Centro\",\"cidade\":\"Pelotas\",\"estado\":\"RS\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

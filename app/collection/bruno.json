@@ -1,0 +1,284 @@
+{
+  "name": "APP Stefanini",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Create Basic User",
+      "seq": 3,
+      "request": {
+        "url": "http://localhost:10000/users",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"username\":\"test4\",\n  \"password\":\"123\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {
+          "res": [
+            {
+              "name": "accessToken",
+              "value": "res.body.accessToken",
+              "enabled": true,
+              "local": false
+            }
+          ]
+        },
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Docker Test",
+      "seq": 8,
+      "request": {
+        "url": "http://localhost:8080/cep/50010000",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "gtw-id",
+            "value": "1kslrpcep",
+            "enabled": true
+          }
+        ],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "List Users",
+      "seq": 4,
+      "request": {
+        "url": "http://localhost:10000/users",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Login Admin",
+      "seq": 1,
+      "request": {
+        "url": "http://localhost:10000/login",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"username\":\"admin\",\n  \"password\":\"123\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {
+          "res": [
+            {
+              "name": "accessToken",
+              "value": "res.body.accessToken",
+              "enabled": true,
+              "local": false
+            }
+          ]
+        },
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Login Basic User",
+      "seq": 2,
+      "request": {
+        "url": "http://localhost:10000/login",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n \"username\":\"test4\",\n  \"password\":\"123\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {
+          "res": [
+            {
+              "name": "accessToken",
+              "value": "res.body.accessToken",
+              "enabled": true,
+              "local": false
+            }
+          ]
+        },
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "none"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Teste CEP DOCKER",
+      "seq": 5,
+      "request": {
+        "url": "http://localhost:10000/consulta-cep?cep=50010000&username=test4",
+        "method": "GET",
+        "headers": [
+          {
+            "name": "gtw-id",
+            "value": "1kslrpcep",
+            "enabled": true
+          }
+        ],
+        "params": [
+          {
+            "name": "cep",
+            "value": "50010000",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "username",
+            "value": "test4",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Filter By Cep",
+      "seq": 6,
+      "request": {
+        "url": "http://localhost:10000/logs/cep?cep=50010000",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "cep",
+            "value": "50010000",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Filter By Username",
+      "seq": 7,
+      "request": {
+        "url": "http://localhost:10000/logs/user?username=test4",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "username",
+            "value": "test4",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "bearer",
+          "bearer": {
+            "token": "{{accessToken}}"
+          }
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "APP Stefanini",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}

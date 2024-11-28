@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/cep/30130000"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"cep\":\"30130000\",\"logradouro\":\"Avenida Afonso Pena\",\"bairro\":\"Centro\",\"cidade\":\"Belo Horizonte\",\"estado\":\"MG\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
